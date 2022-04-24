@@ -1,0 +1,98 @@
+---RPC V 2.o---
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Loding = Instance.new("ScreenGui")
+local LoadingText = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+
+--Properties:
+
+Loding.Name = "Loding"
+Loding.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+LoadingText.Name = "LoadingText"
+LoadingText.Parent = Loding
+LoadingText.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+LoadingText.BorderColor3 = Color3.fromRGB(30, 30, 30)
+LoadingText.BorderSizePixel = 4
+LoadingText.Position = UDim2.new(0.422823697, 0, 0.47361964, 0)
+LoadingText.Size = UDim2.new(0, 210, 0, 42)
+LoadingText.ZIndex = 3
+LoadingText.Font = Enum.Font.Arcade
+LoadingText.Text = ""
+LoadingText.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoadingText.TextSize = 16.000
+LoadingText.TextWrapped = true
+
+UICorner.Parent = LoadingText
+
+-- Scripts:
+
+local function GYUU_fake_script() -- LoadingText.LocalScript 
+	local script = Instance.new('LocalScript', LoadingText)
+
+	wait(0.5)
+	local blur = Instance.new("BlurEffect", game.Lighting)
+	text = "Hello "..game.Players.LocalPlayer.Name
+	
+	for i = 1,#text do
+		script.Parent.Text = string.sub(text, 1, i)
+		wait(0,05)
+	end
+	
+	wait(1)
+	text = "Welcome to RPC"
+	
+	for i = 1,#text do
+		script.Parent.Text = string.sub(text, 1, i)
+		wait(0,05)
+	end
+	
+	wait(0.5)
+	text = "Injecting"
+	
+	for i = 1,#text do
+		script.Parent.Text = string.sub(text, 1, i)
+		wait(0,05)
+	end
+	
+	wait(1)
+    -- Phantom Forces
+	if game.PlaceId == 292439477 then
+	    text = "Injected/Phantom Forces"
+	    for i = 1,#text do
+		script.Parent.Text = string.sub(text, 1, i)
+		wait(0,05)
+	    end
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/RPCOficial/RPC/main/RPC%20PF", true))()
+	    else
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/iiiMaximus/Lua/main/RluRPp4dNAW7f91dskj8.lua"))()
+
+        Library:Show("Game not suported", Color3.fromRGB(255, 0, 0))
+        wait(2)
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/iiiMaximus/Lua/main/RluRPp4dNAW7f91dskj8.lua"))()
+
+        Library:Show("Executing the Universal Hub", Color3.fromRGB(255, 0, 0))
+	end
+
+	wait(0.5)
+	script.Parent.Visible = false
+	game.Lighting.Blur:Destroy()
+	
+
+end
+coroutine.wrap(GYUU_fake_script)()
+
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/iiiMaximus/Lua/main/RluRPp4dNAW7f91dskj8.lua"))()
+
+Library:Show("Welcome to RPC", Color3.fromRGB(255, 0, 0))
+wait(0.5)
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/iiiMaximus/Lua/main/RluRPp4dNAW7f91dskj8.lua"))()
+
+Library:Show("To open executor press F4", Color3.fromRGB(255, 0, 0))
